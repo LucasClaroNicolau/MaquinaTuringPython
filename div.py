@@ -1,10 +1,16 @@
 def maquina_divi(fita):
     estado = -1
     pos = 0
-    print(fita)
     while (estado != 21):
-        print('estado: {0} \n'.format(estado))
-        print('posicao: {0} \n'.format(pos))
+        marc = []
+        for i in range(pos):
+            marc.append(' ')
+        marc.append('|')
+        auxmarc = ''.join(marc)
+        print('{0} \n'.format(auxmarc))
+        aux = ''.join(fita)
+        print('{0} \n'.format(aux))
+        input()
         if (estado == -1):
             pos += 1
             estado += 1
@@ -22,11 +28,8 @@ def maquina_divi(fita):
         elif (estado == 2):
             if (fita[pos] == '*'):
                 pos += 1
-                print('toaqui')
             else:
                 estado = 3
-                print('toaqui')
-
                 pos -= 1
         elif (estado == 3):
             if (fita[pos] == '*'):
@@ -158,17 +161,24 @@ def maquina_divi(fita):
             else:
                 fita[pos] = '_'
                 pos -= 1
-    print('{0} \n'.format(fita))
+    marc = []
+    for i in range(pos):
+        marc.append(' ')
+    marc.append('|')
+    auxmarc = ''.join(marc)
+    print('{0} \n'.format(auxmarc))
+    aux = ''.join(fita)
+    print('{0} \n'.format(aux))
     input()
     p = 0;
-    # for (int i=0; i < fita.size();i++):
     for item in range(len(fita)):
-        if (item == '>'):
+        if (fita[item] == '>'):
             break
-    p += 1
-    fita.erase(fita.begin(), fita.begin() + p);
+        p += 1
+    for item in range(p):
+            fita.remove('_')
     print('Fim \n')
-    print(fita)
+    print(''.join(fita))
     input()
     return
 
@@ -186,7 +196,6 @@ def converte_divi(n):
 
 def monta_divi(a):
     ret = ['>']
-    # , a, '_']
     for item in range(len(a)):
         ret.append('*')
 
@@ -213,14 +222,11 @@ def divi(v1, v2):
     elif (v2 == 0):
         mensagem_div_zero()
     else:
-        # fita = monta_divi(converte_divi(v1), converte_divi(v2))
         fita = (monta_divi(converte_divi(v1)))
-        # fita1 = (converte_divi(v2))
 
         for item in range(v2):
             fita.append('*')
+        for item in range(v1):
+            fita.append('_')
 
         maquina_divi(fita)
-
-
-divi(6, 3)
