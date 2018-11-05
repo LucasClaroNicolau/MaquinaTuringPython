@@ -1,7 +1,7 @@
 def maquina_mult(fita):
     estado = -1
     pos = 0
-    while (estado != 21):
+    while (estado != 12):
         marc = []
         for i in range(pos):
             marc.append(' ')
@@ -11,7 +11,6 @@ def maquina_mult(fita):
         aux = ''.join(fita)
         print('{0} \n'.format(aux))
         input()
-        print(estado,pos, fita[pos])
         if (estado == -1):
             pos += 1
             estado += 1
@@ -34,9 +33,9 @@ def maquina_mult(fita):
         elif (estado == 2):
             if (fita[pos] == '*'):
                 estado = 3
-                fita[pos] = '$'
+                fita[pos] = '&'
                 pos -= 1
-            elif(fita[pos] == '$'):
+            elif(fita[pos] == '&'):
                 estado = 2
                 pos -= 1
             else:
@@ -46,24 +45,24 @@ def maquina_mult(fita):
         elif (estado == 3):
             if (fita[pos] == '*'):
                 pos -=1
-            elif (fita[pos] == '$'):
+            elif (fita[pos] == '&'):
                 pos -= 1
             else:
                 estado = 4
                 pos -=1
-                
+        
         elif (estado == 4):
-            if (fita[pos] == '*'):
-                pos -= 1
+            if(fita[pos] == '*'):
+                pos-=1
             elif(fita[pos] == '_'):
                 estado = 10
-                pos += 1
-            elif(fita[pos] == '$'):
+                pos+=1
+            elif(fita[pos] == '&'):
                 estado = 3
-                pos -=1
+                pos-=1
             else:
-                estado =5
-                pos +=1
+                estado = 5
+                pos+=1
                 
         elif (estado == 5):
             if (fita[pos] == '*'):
@@ -115,13 +114,14 @@ def maquina_mult(fita):
                 
         elif (estado == 11):
             if (fita[pos] == '>'):
+                fita[pos] = '_'
                 estado = 12
-                fita[pos] == '_'
-                pos += 1
+                pos+=1
             else:
                 fita[pos] = '_'
                 pos -= 1
-                
+        
+        print(estado,pos, fita[pos])
     marc = []
     for i in range(pos):
         marc.append(' ')
@@ -156,7 +156,7 @@ def monta_mult(a,b):
     for item in range(b):
         ret.append('*')
     
-    for item in range(a*b):
+    for item in range(a*b+1):
         ret.append('_')
 
     return ret
@@ -168,4 +168,4 @@ def mult(v1, v2):
         fita = monta_mult(v1,v2)
 
         maquina_mult(fita)
-mult(3,3)
+mult(2,1)
