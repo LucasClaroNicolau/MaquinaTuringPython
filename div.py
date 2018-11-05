@@ -185,18 +185,9 @@ def maquina_divi(fita):
 
 # -----------------------------------------------------------------------------------------------------
 
-def converte_divi(n):
-    s = []
-    for i in range(n):
-        s.append('*')
-    return s
-
-
-# -----------------------------------------------------------------------------------------------------
-
 def monta_divi(a):
     ret = ['>']
-    for item in range(len(a)):
+    for item in range(a):
         ret.append('*')
 
     ret.append('_')
@@ -222,7 +213,7 @@ def divi(v1, v2):
     elif (v2 == 0):
         mensagem_div_zero()
     else:
-        fita = (monta_divi(converte_divi(v1)))
+        fita = monta_divi(v1)
 
         for item in range(v2):
             fita.append('*')
