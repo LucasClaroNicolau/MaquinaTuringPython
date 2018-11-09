@@ -9,4 +9,4 @@ Tem como Posibilidades:
 * Dividir
 * Igualar 
 
-![alt text](https://uploaddeimagens.com.br/images/001/718/014/full/image.png?1541784325 "Maquina de Turing")
+![alt text](https://uploaddeimagens.com.br/images/001/718/388/full/PaginaPrincipal.png?1541791158 "Maquina de Turing")
