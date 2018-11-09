@@ -1,3 +1,4 @@
+import os
 def maquina_divi(fita):
     estado = -1
     pos = 0
@@ -7,7 +8,7 @@ def maquina_divi(fita):
             marc.append(' ')
         marc.append('|')
         auxmarc = ''.join(marc)
-        print('{0} \n'.format(auxmarc))
+        print('{0}'.format(auxmarc))
         aux = ''.join(fita)
         print('{0} \n'.format(aux))
         input()
@@ -170,6 +171,7 @@ def maquina_divi(fita):
     aux = ''.join(fita)
     print('{0} \n'.format(aux))
     input()
+    os.system('cls')
     p = 0;
     for item in range(len(fita)):
         if (fita[item] == '>'):
@@ -177,7 +179,7 @@ def maquina_divi(fita):
         p += 1
     for item in range(p):
             fita.remove('_')
-    print('Fim \n')
+    print('Fim ')
     print(''.join(fita))
     input()
     return
@@ -194,8 +196,13 @@ def monta_divi(a,b):
     
     for item in range(b):
             ret.append('*')
-    for item in range(a):
+    ret.append('_')
+    for item in range(int(a/b)):
             ret.append('_')
+    ret.append('_')
+    for item in range(a%b):
+        ret.append('_')
+
     return ret
 
 

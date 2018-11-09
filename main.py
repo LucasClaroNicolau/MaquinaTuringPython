@@ -1,6 +1,8 @@
 from iguala import iguala
 from div import divi
 from mult import mult
+from soma import soma
+from sub import sub
 import os
 
 def op():
@@ -28,34 +30,84 @@ def op():
 if __name__ == '__main__':
     while(True):
         func = op()
+        stop = True
+        v1 = ''
+        v2 = ''
         if(func == 1):
-            print("Insira primeiro valor")
-            v1 = int(input())
-            print("Insira segundo valor:")
-            v2 = int(input())
+            while (stop):
+                print("Insira o primeiro valor")
+                v1 = input()
+                if (v1.isnumeric()):
+                    stop = False
+                os.system('cls')
+            stop = True
+            while (stop):
+                print("Insira o segundo valor")
+                v2 = input()
+                if (v2.isnumeric()):
+                    stop = False
+                os.system('cls')
+            soma(int(v1),int(v2))
         elif(func == 2):
-            print("Insira primeiro valor")
-            v1 = int(input())
-            print("Insira segundo valor:")
-            v2 = int(input())
+            while (stop):
+                print("Insira o primeiro valor")
+                v1 = input()
+                if (v1.isnumeric()):
+                    stop = False
+                os.system('cls')
+            stop = True
+            while (stop):
+                print("Insira o segundo valor")
+                v2 = input()
+                if (v2.isnumeric()):
+                    stop = False
+                os.system('cls')
+            sub(int(v1),int(v2))
         elif(func == 3):
-            print("Insira primeiro valor")
-            v1 = int(input())
-            print("Insira segundo valor:")
-            v2 = int(input())
-            mult(v1,v2)
+            while (stop):
+                print("Insira o primeiro valor")
+                v1 = input()
+                if (v1.isnumeric()):
+                    stop = False
+                os.system('cls')
+            stop = True
+            while (stop):
+                print("Insira o segundo valor")
+                v2 = input()
+                if (v2.isnumeric()):
+                    stop = False
+                os.system('cls')
+            mult(int(v1),int(v2))
         elif(func == 4):
-            print("Insira primeiro valor")
-            v1 = int(input())
-            print("Insira segundo valor:")
-            v2 = int(input())
-            divi(v1,v2)
+            while (stop):
+                print("Insira o primeiro valor")
+                v1 = input()
+                if (v1.isnumeric()):
+                    stop = False
+                os.system('cls')
+            stop = True
+            while (stop):
+                print("Insira o segundo valor")
+                v2 = input()
+                if (v2.isnumeric()):
+                    stop = False
+                os.system('cls')
+            divi(int(v1),int(v2))
         elif(func == 5):
-            print("Insira primeiro valor")
-            v1 = int(input())
-            print("Insira segundo valor:")
-            v2 = int(input())
-            iguala(v1, v2)
+            while (stop):
+                print("Insira o primeiro valor")
+                v1 = input()
+                if (v1.isnumeric()):
+                    stop = False
+                os.system('cls')
+            stop = True
+            while (stop):
+                print("Insira o segundo valor")
+                v2 = input()
+                if (v2.isnumeric()):
+                    stop = False
+                os.system('cls')
+            iguala(int(v1),int(v2))
         elif(func == 0):
             break
 
