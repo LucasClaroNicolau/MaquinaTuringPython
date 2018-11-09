@@ -1,6 +1,7 @@
 # MaquinaTuringPython
 Implementação da Maquina de Turing para matéria de Teoria da Computação - UNESC.
 
+
 Tem como Posibilidades:
 * Somar
 * Subtrair

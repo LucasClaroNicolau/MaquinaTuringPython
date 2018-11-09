@@ -1,4 +1,5 @@
 import os
+
 def maquina_mult(fita):
     estado = -1
     pos = 0

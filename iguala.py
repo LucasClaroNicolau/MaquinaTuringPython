@@ -1,4 +1,5 @@
 import os
+
 def maquina_iguala(fita):
     estado = -1
     pos = 0

@@ -120,7 +120,7 @@ def monta_sub(a,b):
 
 def mensagem_sub():
     print('Impossivel Subtrair, Primeiro numero é maior que o segundo!\n')
-    input();
+    input()
 
 # -----------------------------------------------------------------------------------------------------
 def sub(v1, v2):

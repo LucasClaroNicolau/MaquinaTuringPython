@@ -4,7 +4,6 @@ from mult import mult
 from soma import soma
 from sub import sub
 import os
-
 def op():
     stop = True
     op = ""
