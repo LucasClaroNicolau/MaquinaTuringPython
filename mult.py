@@ -166,6 +166,5 @@ def monta_mult(a,b):
 def mult(v1, v2):
    
         fita = monta_mult(v1,v2)
-
         maquina_mult(fita)
-mult(2,1)
+

@@ -219,6 +219,4 @@ def divi(v1, v2):
         mensagem_div_zero()
     else:
         fita = monta_divi(v1,v2)
-
-
         maquina_divi(fita)

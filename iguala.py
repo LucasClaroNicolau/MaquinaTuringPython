@@ -100,20 +100,17 @@ def maquina_iguala(fita):
 
 # -----------------------------------------------------------------------------------------------------
 
-def converte_iguala(n):
-    s = []
-    for i in range(n):
-        s.append('*')
-    return s
-
-
-# -----------------------------------------------------------------------------------------------------
-
-def monta_iguala(a):
+def monta_iguala(a,b):
     ret = ['>']
-    for item in range(len(a)):
+    for item in range(a):
         ret.append('*')
 
+    ret.append('_')
+
+    for item in range(b):
+        ret.append('*')
+    for item in range(a-b):
+        ret.append('_')
     ret.append('_')
     return ret
 
@@ -122,12 +119,5 @@ def monta_iguala(a):
 # -----------------------------------------------------------------------------------------------------
 def iguala(v1, v2):
 
-        fita = (monta_iguala(converte_iguala(v1)))
-
-        for item in range(v2):
-            fita.append('*')
-        for item in range(v1-v2):
-            fita.append('_')
-        fita.append('_')
-
+        fita = (monta_iguala(v1,v2))
         maquina_iguala(fita)
