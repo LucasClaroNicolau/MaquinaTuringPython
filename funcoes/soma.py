@@ -1,4 +1,14 @@
 import os
+import platform
+
+def limpa():
+    plata = platform.system()
+    limpa = ""
+    if(plata == "Windows"):
+        os.system('cls')
+    else:
+        os.system('clear')
+
 
 def maquina_soma(fita):
     estado = -1
@@ -47,7 +57,7 @@ def maquina_soma(fita):
     aux = ''.join(fita)
     print('{0} \n'.format(aux))
     input()
-    os.system('cls')
+    limpa()
     print('Fim')
     print(''.join(fita))
     input()

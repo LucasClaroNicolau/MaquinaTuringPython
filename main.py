@@ -4,11 +4,22 @@ from funcoes.mult import mult
 from funcoes.soma import soma
 from funcoes.sub import sub
 import os
+import platform
+
+def limpa():
+    plata = platform.system()
+    limpa = ""
+    if(plata == "Windows"):
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
 def op():
     stop = True
     op = ""
     while(stop):
-        os.system("cls")
+        limpa()
         print("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
         print("|                                                                            |")
         print("|     $$$$$$$$$$$   $$       $$   $$$$$$$   $$   $$$     $$   $$$$$$$$$      |")
@@ -36,8 +47,8 @@ def op():
         op = input()
         if(op.isnumeric()):
             stop = False
-        os.system("cls");
-    return int(op);
+            limpa()
+    return int(op)
 
 
 if __name__ == '__main__':
@@ -52,14 +63,14 @@ if __name__ == '__main__':
                 v1 = input()
                 if (v1.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             stop = True
             while (stop):
                 print("Insira o segundo valor")
                 v2 = input()
                 if (v2.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             soma(int(v1),int(v2))
         elif(func == 2):
             while (stop):
@@ -67,14 +78,14 @@ if __name__ == '__main__':
                 v1 = input()
                 if (v1.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             stop = True
             while (stop):
                 print("Insira o segundo valor")
                 v2 = input()
                 if (v2.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             sub(int(v1),int(v2))
         elif(func == 3):
             while (stop):
@@ -82,14 +93,14 @@ if __name__ == '__main__':
                 v1 = input()
                 if (v1.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             stop = True
             while (stop):
                 print("Insira o segundo valor")
                 v2 = input()
                 if (v2.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             mult(int(v1),int(v2))
         elif(func == 4):
             while (stop):
@@ -97,14 +108,14 @@ if __name__ == '__main__':
                 v1 = input()
                 if (v1.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             stop = True
             while (stop):
                 print("Insira o segundo valor")
                 v2 = input()
                 if (v2.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             divi(int(v1),int(v2))
         elif(func == 5):
             while (stop):
@@ -112,14 +123,14 @@ if __name__ == '__main__':
                 v1 = input()
                 if (v1.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             stop = True
             while (stop):
                 print("Insira o segundo valor")
                 v2 = input()
                 if (v2.isnumeric()):
                     stop = False
-                os.system('cls')
+                limpa()
             iguala(int(v1),int(v2))
         elif(func == 0):
             break

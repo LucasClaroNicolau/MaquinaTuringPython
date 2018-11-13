@@ -1,9 +1,19 @@
 import os
+import platform
+
+def limpa():
+    plata = platform.system()
+    limpa = ""
+    if(plata == "Windows"):
+        os.system('cls')
+    else:
+        os.system('clear')
+
+
 def maquina_sub(fita):
     estado = -1
     pos = 0
     while (estado != 8):
-        print(estado)
         marc = []
         for i in range(pos):
             marc.append(' ')
@@ -89,7 +99,7 @@ def maquina_sub(fita):
     aux = ''.join(fita)
     print('{0} \n'.format(aux))
     input()
-    os.system('cls')
+    limpa()
     p = 0;
     for item in range(len(fita)):
         if (fita[item] == '>'):
