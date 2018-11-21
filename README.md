@@ -10,3 +10,5 @@ Tem como Posibilidades:
 * Igualar 
 
 ![alt text](https://i.imgur.com/Q77E7Tn.png "Maquina de Turing")
+
+[Executar](https://onlinegdb.com/ryehLPXm07)
